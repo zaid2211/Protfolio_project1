@@ -28,8 +28,9 @@ public class TestBase {
 	
 	
 	public TestBase(){
-		Properties prop =new Properties();
+		prop =new Properties();
 		try {
+		 
 			FileInputStream file =new FileInputStream("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\src\\main\\java\\com"
 					+ "\\nopcommerce\\config\\config.properties");
 		prop.load(file);
@@ -67,14 +68,16 @@ public class TestBase {
 			driver=new InternetExplorerDriver();
 		}
 		
+		eventListner =new WebEventListner();
 		 e_driver=new EventFiringWebDriver(driver);
 		 e_driver.register(eventListner);
 		 driver=e_driver;
 		 
 		 driver.manage().window().maximize();
 		 driver.manage().deleteAllCookies();
-		 driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		 
 		 driver.get(prop.getProperty("url"));
+		 driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 
 		
 		

@@ -23,6 +23,13 @@ public class HomePage extends TestBase {
 	@FindBy (linkText = "Log out")
 	private WebElement logOutBut;
 	
+	@FindBy (linkText = "Computers")
+	private WebElement computers;
+	
+	@FindBy (linkText = "Electronics")
+	private WebElement eletronics;
+	
+	
 	//initializing page objects using pagefactory
 	
 	public HomePage() {
@@ -57,6 +64,19 @@ public class HomePage extends TestBase {
 		String value=logOutBut.getText();
 		boolean val = value.contains("Log out");
 		return val;
+	}
+	
+	public ComputersPage clickComputers() {
+		Utility.hold();
+		computers.click();
+		
+		return new ComputersPage();
+	}
+	
+	public EletronicsPage clickEletronics() {
+		Utility.hold();
+		eletronics.click();
+		return new EletronicsPage();
 	}
 	
 	

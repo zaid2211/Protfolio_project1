@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nopcommerce.testCases.RegisterPageTest">
+      <class name="com.nopcommerce.testCases.ComputersPageTest">
         <methods>
-          <include name="register"/>
-          <include name="verifyRegistration"/>
-          <include name="tearDown"/>
+          <include name="validateComputersPage"/>
+          <include name="addDesktopToCart"/>
           <include name="setup"/>
-          <include name="clickContinue"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.nopcommerce.testCases.RegisterPageTest -->
+      </class> <!-- com.nopcommerce.testCases.ComputersPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

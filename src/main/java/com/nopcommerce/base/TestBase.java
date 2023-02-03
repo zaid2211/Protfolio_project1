@@ -20,15 +20,17 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
-	protected WebDriver driver ;
-	protected Properties prop;
+	protected static WebDriver driver ;
+	protected static Properties prop;
 	protected EventFiringWebDriver e_driver;
-	protected WebEventListner eventListner;
+	protected static WebEventListner eventListner;
 	
 	
 	
 	public TestBase(){
 		prop =new Properties();
+	
+		
 		try {
 		 
 			FileInputStream file =new FileInputStream("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\src\\main\\java\\com"
@@ -69,7 +71,7 @@ public class TestBase {
 		}
 		
 		eventListner =new WebEventListner();
-		 e_driver=new EventFiringWebDriver(driver);
+		e_driver=new EventFiringWebDriver(driver);
 		 e_driver.register(eventListner);
 		 driver=e_driver;
 		 

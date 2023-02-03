@@ -5,8 +5,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
-import org.testng.Reporter;
-
 import com.nopcommerce.base.TestBase;
 
 @SuppressWarnings("deprecation")
@@ -33,22 +31,22 @@ public class WebEventListner extends TestBase implements WebDriverEventListener 
 	}
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
-		Reporter.log("Launching url :"+url,true);
+		System.out.println(("Launching url :"+url));
 		
 	}
 
 	public void afterNavigateTo(String url, WebDriver driver) {
-		Reporter.log("url launched succefully :",true);
+		System.out.println("url launched succefully :");
 		
 	}
 
 	public void beforeNavigateBack(WebDriver driver) {
-		Reporter.log("Navigating back to previous page",true);
+		System.out.println("Navigating back to previous page");
 		
 	}
 
 	public void afterNavigateBack(WebDriver driver) {
-		Reporter.log("Navigated back to previous page",true);
+		System.out.println("Navigated back to previous page");
 		
 	}
 
@@ -73,22 +71,22 @@ public class WebEventListner extends TestBase implements WebDriverEventListener 
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		Reporter.log("Trying to find Element By : " + by.toString(),true);
+		System.out.println("Trying to find Element By : " + by.toString());
 		
 	}
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		Reporter.log("Found Element By : " + by.toString(),true);
+		System.out.println("Found Element By : " + by.toString());
 		
 	}
 
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-		Reporter.log("Trying to click on: " + element.toString());
+		System.out.println("Trying to click on: " + element.toString());
 		
 	}
 
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		Reporter.log("Clicked on: " + element.toString(),true);
+		System.out.println("Clicked on: " + element.toString());
 		
 	}
 
@@ -123,8 +121,8 @@ public class WebEventListner extends TestBase implements WebDriverEventListener 
 	}
 
 	public void onException(Throwable throwable, WebDriver driver) {
-		Reporter.log("Exception occured :"+throwable);
-		Utility.takeScreenshot(driver);
+		System.out.println("Exception occured :"+throwable);
+		Utility.takeScreenshot();
 	}
 
 	public <X> void beforeGetScreenshotAs(OutputType<X> target) {

@@ -47,8 +47,9 @@ public class RegisterPage extends TestBase {
 	@FindBy (id = "register-button")
 	private WebElement registerBut;
 	
-	@FindBy (xpath = "//div[@class='result']")
-	private WebElement result;
+	
+	
+	
 	
 	public RegisterPage() {
 		PageFactory.initElements(driver,this);
@@ -102,16 +103,15 @@ public class RegisterPage extends TestBase {
 		
 	}
 	
-	public void clickOnRegisterBut() {
+	public ReturnedRegistrationPage clickOnRegisterBut() {
 		registerBut.click();
+		return new ReturnedRegistrationPage();
 		}
 	
-	public String verifyRegistrationMessage() {
-		 
-		 Utility.hold();
-		return result.getText();
-		
-	}
+	
+	
+	
+	
 	
 	
 	

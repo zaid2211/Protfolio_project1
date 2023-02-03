@@ -5,11 +5,10 @@
     <classes>
       <class name="com.nopcommerce.testCases.RegisterPageTest">
         <methods>
-          <include name="beforeClass"/>
-          <include name="registerPageTitleTest"/>
           <include name="register"/>
-          <include name="afterClass"/>
           <include name="verifyRegistration"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.nopcommerce.testCases.RegisterPageTest -->
     </classes>

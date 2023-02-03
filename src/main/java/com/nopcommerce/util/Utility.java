@@ -21,8 +21,7 @@ public class Utility extends TestBase {
 	public static void takeScreenshot() {
 		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest=new File("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\"
-				+ "ScreenShots"+System.currentTimeMillis()+".png");
+		File dest=new File("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\ScreenShots"+System.currentTimeMillis()+".png");
 		try {
 			FileHandler.copy(src, dest);
 		} catch (IOException e) {

@@ -9,6 +9,7 @@
           <include name="verifyRegistration"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="clickContinue"/>
         </methods>
       </class> <!-- com.nopcommerce.testCases.RegisterPageTest -->
     </classes>

@@ -39,17 +39,13 @@ public class Utility extends TestBase {
 	}
 	
 	public static String readExcel(int rowNum,int cellNum) throws  IOException, InvalidFormatException {
-		File file =new File("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\src\\test\\java\\com\\nopcommerce\\testData\\TestData.xlsx");
 		
+		File file=new File("C:\\Users\\jaids\\eclipse-git\\Protfolio_project1\\src\\test\\java\\com\\nopcommerce\\testData\\TestData1.xlsx");
 		
-			Workbook wb = WorkbookFactory.create(file);
-			Sheet sheet = wb.getSheet("Sheet1");
-			Row row=sheet.getRow(rowNum);
-			Cell cell=row.getCell(cellNum);
-			String value=cell.getStringCellValue();
-			return value;
+		Workbook wb=WorkbookFactory.create(file);
+		String value=wb.getSheet("Sheet1").getRow(rowNum).getCell(cellNum).getStringCellValue();
 		
-			
+		return value;
 		
 		
 	}

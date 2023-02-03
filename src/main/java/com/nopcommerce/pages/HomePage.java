@@ -17,6 +17,12 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//img[contains(@alt,'nopCommerce demo store')]")
 	private WebElement homeLogo;
 	
+	@FindBy (linkText = "Log in")
+	private WebElement loginBut;
+	
+	@FindBy (linkText = "Log out")
+	private WebElement logOutBut;
+	
 	//initializing page objects using pagefactory
 	
 	public HomePage() {
@@ -39,6 +45,18 @@ public class HomePage extends TestBase {
 		Utility.hold();
 		registerBut.click();
 		return new RegisterPage();
+	}
+	
+	public LoginPage clickLogin() {
+		loginBut.click();
+		return new LoginPage();
+		
+	}
+	
+	public boolean verifyLogin() {
+		String value=logOutBut.getText();
+		boolean val = value.contains("Log out");
+		return val;
 	}
 	
 	

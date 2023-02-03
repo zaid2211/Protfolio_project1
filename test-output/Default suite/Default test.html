@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 03 15:51:00 IST 2023</td>
+<td>Started on:</td><td>Fri Feb 03 19:19:18 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23440 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15807 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,8 +78,13 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.nopcommerce.testCases.RegisterPageTest.verifyRegistration()'><b>verifyRegistration</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest</td>
 <td><div><pre>java.lang.StackOverflowError
-	at java.base/java.io.Writer.write(Writer.java:249)
-	at java.base/java.io.PrintStream.writeln(PrintStream.java:720)
+	at java.base/java.nio.HeapCharBuffer.&lt;init&gt;(HeapCharBuffer.java:78)
+	at java.base/java.nio.CharBuffer.wrap(CharBuffer.java:408)
+	at java.base/sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:281)
+	at java.base/sun.nio.cs.StreamEncoder.write(StreamEncoder.java:132)
+	at java.base/java.io.OutputStreamWriter.write(OutputStreamWriter.java:205)
+	at java.base/java.io.BufferedWriter.flushBuffer(BufferedWriter.java:120)
+	at java.base/java.io.PrintStream.writeln(PrintStream.java:722)
 	at java.base/java.io.PrintStream.println(PrintStream.java:1028)
 	at com.nopcommerce.util.WebEventListner.onException(WebEventListner.java:124)
 	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
@@ -1097,15 +1102,15 @@ function toggleAllBoxes() {
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:85)
 	at jdk.proxy2/jdk.proxy2.$Proxy13.onException(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:108)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.getScreenshotAs(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:303)
-	at com.nopcommerce.util.Utility.takeScreenshot(Utility.java:23)
-	at com.nopcommerce.util.WebEventListner.onException(WebEventListner.java:125)
-</pre></div><a href='#' onClick='toggleBox("stack-trace334300782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace334300782'><pre>java.lang.StackOverflowError
-	at java.base/java.io.Writer.write(Writer.java:249)
-	at java.base/java.io.PrintStream.writeln(PrintStream.java:720)
+</pre></div><a href='#' onClick='toggleBox("stack-trace15288143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace15288143'><pre>java.lang.StackOverflowError
+	at java.base/java.nio.HeapCharBuffer.&lt;init&gt;(HeapCharBuffer.java:78)
+	at java.base/java.nio.CharBuffer.wrap(CharBuffer.java:408)
+	at java.base/sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:281)
+	at java.base/sun.nio.cs.StreamEncoder.write(StreamEncoder.java:132)
+	at java.base/java.io.OutputStreamWriter.write(OutputStreamWriter.java:205)
+	at java.base/java.io.BufferedWriter.flushBuffer(BufferedWriter.java:120)
+	at java.base/java.io.PrintStream.writeln(PrintStream.java:722)
 	at java.base/java.io.PrintStream.println(PrintStream.java:1028)
 	at com.nopcommerce.util.WebEventListner.onException(WebEventListner.java:124)
 	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
@@ -2123,14 +2128,9 @@ function toggleAllBoxes() {
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:85)
 	at jdk.proxy2/jdk.proxy2.$Proxy13.onException(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:108)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.getScreenshotAs(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.getScreenshotAs(EventFiringWebDriver.java:303)
-	at com.nopcommerce.util.Utility.takeScreenshot(Utility.java:23)
-	at com.nopcommerce.util.WebEventListner.onException(WebEventListner.java:125)
 </pre></div></td>
-<td>10</td>
-<td>com.nopcommerce.testCases.RegisterPageTest@292b08d6</td></tr>
+<td>7</td>
+<td>com.nopcommerce.testCases.RegisterPageTest@408d971b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -2141,11 +2141,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nopcommerce.testCases.RegisterPageTest.register()'><b>register</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest<br/>
-<a href="#Output-1974918491" onClick='toggleBox("Output-1974918491", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.nopcommerce.testCases.RegisterPageTest.registerPageTitleTest()'><b>registerPageTitleTest</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest<br/>
+<a href="#Output-1324165839" onClick='toggleBox("Output-1324165839", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1974918491" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1974918491">
+<a href="#Output-1324165839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1324165839">
+Register page title validated :nopCommerce demo store. Register<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.nopcommerce.testCases.RegisterPageTest@408d971b</td></tr>
+<tr>
+<td title='com.nopcommerce.testCases.RegisterPageTest.registerPageLogo()'><b>registerPageLogo</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest<br/>
+<a href="#Output-1527061084" onClick='toggleBox("Output-1527061084", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1527061084" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1527061084">
+Register page logo validated :true<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.nopcommerce.testCases.RegisterPageTest@408d971b</td></tr>
+<tr>
+<td title='com.nopcommerce.testCases.RegisterPageTest.register()'><b>register</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest<br/>
+<a href="#Output-1169015699" onClick='toggleBox("Output-1169015699", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1169015699" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1169015699">
 Gender entered :Male<br/>
 First name entered :Zald<br/>
 Last name entered :Shaikh<br/>
@@ -2156,8 +2180,65 @@ Register button clicked<br/>
 </div>
 </td>
 <td></td>
-<td>3</td>
-<td>com.nopcommerce.testCases.RegisterPageTest@292b08d6</td></tr>
+<td>1</td>
+<td>com.nopcommerce.testCases.RegisterPageTest@408d971b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.testCases.RegisterPageTest.clickContinue()'><b>clickContinue</b><br>Test class: com.nopcommerce.testCases.RegisterPageTest</td>
+<td><div><pre>java.lang.Throwable: Method com.nopcommerce.testCases.RegisterPageTest.clickContinue() on instance com.nopcommerce.testCases.RegisterPageTest@408d971b depends on not successfully finished methods 
+[com.nopcommerce.testCases.RegisterPageTest.verifyRegistration() on instance com.nopcommerce.testCases.RegisterPageTest@408d971b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace320501014", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace320501014'><pre>java.lang.Throwable: Method com.nopcommerce.testCases.RegisterPageTest.clickContinue() on instance com.nopcommerce.testCases.RegisterPageTest@408d971b depends on not successfully finished methods 
+[com.nopcommerce.testCases.RegisterPageTest.verifyRegistration() on instance com.nopcommerce.testCases.RegisterPageTest@408d971b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.nopcommerce.testCases.RegisterPageTest@408d971b</td></tr>
 </table><p>
 </body>
 </html>

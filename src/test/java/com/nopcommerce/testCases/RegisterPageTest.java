@@ -76,7 +76,7 @@ public class RegisterPageTest extends TestBase{
   
   @Test (priority = 5, dependsOnMethods = {"verifyRegistration"})
   public void clickContinue() {
-	  returnedPage.clickContinue();
+	  home =returnedPage.clickContinue();
 	  
   }
   

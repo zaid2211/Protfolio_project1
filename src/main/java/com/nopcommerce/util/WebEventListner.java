@@ -5,10 +5,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
-import com.nopcommerce.base.TestBase;
+
+
 
 @SuppressWarnings("deprecation")
-public class WebEventListner extends TestBase implements WebDriverEventListener {
+public class WebEventListner extends com.nopcommerce.base.TestBase implements WebDriverEventListener {
 
 	public void beforeAlertAccept(WebDriver driver) {
 		// TODO Auto-generated method stub
